@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: my-first-app
+    labels:
+      type: front-end
+spec:
+    imagePullSecrets:
+    - name: ocirsecret
+    containers:
+      - name: update-secret
+        image: update-secret:latest
